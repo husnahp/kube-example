@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-demo1
+  namespace: default
+spec:
+  rules:
+  - host: myapp.example1.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: green-web
+            port:
+              number: 80
+        pathType: ImplementationSpecific
