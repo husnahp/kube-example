@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-demo
+  namespace: default
+spec:
+  rules:
+  - host: myapp.example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: red-web
+            port:
+              number: 80
+        pathType: ImplementationSpecific
