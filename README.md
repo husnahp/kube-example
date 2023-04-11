@@ -1,2 +1,2 @@
-# Wazuh
-wazuh installtion
+# Kubernetes 
+Practice files
